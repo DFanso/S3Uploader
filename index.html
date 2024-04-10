@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>S3 Image Bulk Upload</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>S3 Image Bulk Upload</h1>
+    
+    <div class="form-group">
+      <label for="domain">Select Domain:</label>
+      <select id="domain" class="form-control">
+        <option value="DP">DP</option>
+        <option value="SERVICE">SERVICE</option>
+        <option value="CATEGORY">CATEGORY</option>
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <input type="file" id="fileInput" accept="image/*" multiple class="form-control-file">
+    </div>
+    
+    <button onclick="uploadImages()" class="btn btn-primary">Upload</button>
+    
+    <div id="previews" class="image-previews"></div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
