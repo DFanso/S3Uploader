@@ -1,4 +1,5 @@
 let imageURLs = [];
+var API_URL = "http://localhost:8000/v1/s3/generate-presigned-url";
 
 function uploadImages() {
   const fileInput = document.getElementById('fileInput');
@@ -18,7 +19,7 @@ function uploadImages() {
     formData.append('domain', domain);
     formData.append('contentType', file.type);
     
-    fetch('https://api.quick-quest.dfanso.dev/v1/s3/generate-presigned-url', {
+    fetch(API_URL, {
       method: 'POST',
       headers: {
         'accept': 'application/json',
